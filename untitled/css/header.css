@@ -1,0 +1,35 @@
+.nanum-gothic-coding-regular {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 40px;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nanum-gothic-coding-regular ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end; /* 수정된 부분 */
+  align-items: center; /* 추가된 부분 */
+}
+
+.nanum-gothic-coding-regular li {
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+.nanum-gothic-coding-regular a {
+  color: aliceblue;
+  text-decoration: none; /* 링크에 밑줄 제거 */
+}
+
+/* 추가된 CSS: a:hover 스타일 설정 (마우스를 올렸을 때) */
+.nanum-gothic-coding-regular a:hover {
+  color: green; /* 마우스를 올렸을 때 색상 변경 */
+}
+
