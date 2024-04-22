@@ -1,4 +1,9 @@
+body {
+  margin-top: 50px; /* 헤더와 컨텐츠 사이의 간격을 조정 */
+}
+
 .nanum-gothic-coding-regular {
+  background-color: black;
   font-family: "Nanum Gothic Coding", monospace;
   font-weight: bold;
   font-style: normal;
@@ -7,24 +12,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky; /* 헤더를 고정 */
+  position: fixed; /* 헤더를 고정 */
   top: 0; /* 상단에 고정 */
-  left: 0;
+  /*left: 0;*/
   width: 100%; /* 가로 폭 100% */
+  z-index: 1000; /* 다른 요소 위에 헤더가 나타나도록 설정 */
 }
 
 .nanum-gothic-coding-regular ul {
   display: flex;
   list-style-type: none;
-  margin: 0;
+  margin: 20px;
   padding: 0;
   justify-content: flex-end; /* 수정된 부분 */
   align-items: center; /* 추가된 부분 */
 }
 
 .nanum-gothic-coding-regular li {
-  margin-left: 20px;
-  font-size: 25px;
+  margin-left: 50px;
+  font-size: 20px;
 }
 
 .nanum-gothic-coding-regular a {
@@ -37,3 +43,14 @@
   color: green; /* 마우스를 올렸을 때 색상 변경 */
 }
 
+hr {
+  color: aliceblue;
+  z-index: 1000;
+  position: fixed;
+  /*top: 50px; !* 헤더의 높이만큼 여백을 주어 헤더 아래에 고정 *!*/
+  /*left: 0;*/
+  width: 100%;
+  /*border: none;*/
+  /*border-top: 1px solid #ccc;*/
+  margin: 0;
+}

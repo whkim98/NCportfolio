@@ -2,14 +2,14 @@ body{
   background-color: black;
 }
 
-.nanum-gothic-coding-regular {
+.hi {
   font-family: "Nanum Gothic Coding", monospace;
   font-weight: bold;
   font-style: normal;
   font-size: 40px;
   color: aliceblue;
-  display: flex;
-  justify-content: space-between;
+  /*display: flex;*/
+  /*justify-content: space-between;*/
   align-items: center;
   margin: 10px;
 }
@@ -23,7 +23,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px;
+  margin: 10px;
 }
 
 .typing-effect {
@@ -88,7 +88,7 @@ body{
   text-align: center; /* 텍스트를 가운데 정렬 */
 }
 
-button {
+.about button {
   background-color: transparent; /* 배경색 투명으로 설정 */
   border: none; /* 테두리 제거 */
   cursor: pointer; /* 마우스 포인터 모양 변경 */
@@ -98,10 +98,43 @@ button {
   margin: 0; /* 마진 제거 */
 }
 
+.about button:hover {
+  /* 마우스 오버 시 적용될 스타일 */
+  /* 예를 들어 배경색과 텍스트 색상을 변경할 수 있습니다. */
+  color: green;
+}
+
 .bar {
   height: 10px; /* 막대의 높이 */
   background-color: purple; /* 막대의 색상 */
   margin-top: 10px; /* 막대 위 여백 */
 }
 
+.projects {
+  text-align: center; /* 텍스트 중앙 정렬 */
+  align-items: center;
+}
 
+.projects h2 {
+  color: aliceblue; /* 제목 색상 */
+  font-size: 40px;
+}
+
+.projects .buttons {
+  display: flex; /* 버튼들을 가로로 배치 */
+  justify-content: center; /* 가운데 정렬 */
+  margin-top: 20px; /* 위 여백 */
+}
+
+.projects .buttons button {
+  margin: 0 10px; /* 버튼 간격 */
+  padding: 10px 20px; /* 버튼 내부 여백 */
+  background-color: #ccc; /* 배경색 */
+  border: none; /* 테두리 제거 */
+  cursor: pointer; /* 커서 모양 */
+  color: #fff; /* 버튼 텍스트 색상 */
+}
+
+.projects .buttons button:hover {
+  background-color: #666; /* 호버시 배경색 변경 */
+}
