@@ -11,9 +11,23 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 10px;
+}
+
+.nanum-gothic-coding-regular-sub {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
 }
 
 .typing-effect {
+  margin: 10px;
   font-family: "Nanum Gothic Coding", monospace;
   font-weight: bold;
   font-style: normal;
@@ -48,7 +62,7 @@ body{
   }
 }
 
-.container {
+.about {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +79,7 @@ body{
   max-width: 800px; /* 컨텐츠 최대 너비 지정 */
 }
 
-.content img {
+.about img {
   max-width: 500px; /* 이미지의 최대 너비 지정 */
 }
 
