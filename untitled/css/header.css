@@ -7,6 +7,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky; /* 헤더를 고정 */
+  top: 0; /* 상단에 고정 */
+  left: 0;
+  width: 100%; /* 가로 폭 100% */
 }
 
 .nanum-gothic-coding-regular ul {

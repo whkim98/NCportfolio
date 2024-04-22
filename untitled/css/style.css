@@ -23,7 +23,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
+  margin: 50px;
 }
 
 .typing-effect {
@@ -80,10 +80,28 @@ body{
 }
 
 .about img {
-  max-width: 500px; /* 이미지의 최대 너비 지정 */
+  max-width: 530px; /* 이미지의 최대 너비 지정 */
 }
 
 .about-me {
   flex: 1; /* 남은 공간을 채우도록 설정 */
   text-align: center; /* 텍스트를 가운데 정렬 */
 }
+
+button {
+  background-color: transparent; /* 배경색 투명으로 설정 */
+  border: none; /* 테두리 제거 */
+  cursor: pointer; /* 마우스 포인터 모양 변경 */
+  color: inherit; /* 상속된 텍스트 색상 사용 */
+  font-size: inherit; /* 상속된 폰트 크기 사용 */
+  padding: 0; /* 내부 여백 제거 */
+  margin: 0; /* 마진 제거 */
+}
+
+.bar {
+  height: 10px; /* 막대의 높이 */
+  background-color: purple; /* 막대의 색상 */
+  margin-top: 10px; /* 막대 위 여백 */
+}
+
+
