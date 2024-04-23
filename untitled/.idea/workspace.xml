@@ -7,7 +7,6 @@
     <list default="true" id="d7f17978-64ee-4832-9dbc-967f70ee27c1" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/content.js" afterDir="false" />
     </list>
@@ -117,7 +116,7 @@
       <workItem from="1713746544801" duration="4257000" />
       <workItem from="1713750959557" duration="193000" />
       <workItem from="1713751224390" duration="559000" />
-      <workItem from="1713751801087" duration="20537000" />
+      <workItem from="1713751801087" duration="22995000" />
     </task>
     <servers />
   </component>

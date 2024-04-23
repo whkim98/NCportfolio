@@ -1,3 +1,18 @@
+// 헤더를 가져와서 삽입하는 함수
+function includeHeader() {
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+}
+
+// 페이지 로드 시 헤더를 삽입
+window.onload = function() {
+    includeHeader();
+    showContent(1);
+};
+
 function showContent(contentId) {
     var contentElement = document.getElementById("content");
     contentElement.innerHTML = ""; // 기존 내용 초기화
@@ -23,48 +38,51 @@ function showContent(contentId) {
     barElement.style.width = textWidth + "px"; // 막대의 길이를 텍스트의 길이에 맞게 설정
     contentElement.appendChild(barElement); // 막대를 콘텐츠 요소에 추가
 
-    // content.js
-
-
-
-        textWidth = getTextWidth(text); // 텍스트의 길이를 가져옴
-        barElement.style.width = textWidth + "px"; // 막대의 길이를 텍스트의 길이에 맞게 설정
-        contentElement.appendChild(barElement);
-
-        // About 섹션으로 스크롤 이동
-        if (contentId === 1) {
-            var aboutSection = document.getElementById("about");
-            aboutSection.scrollIntoView({ behavior: 'smooth' });
-        }
-
-
+    // About 섹션으로 스크롤 이동
+    if (contentId === 1) {
+        var aboutSection = document.getElementById("about");
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
 document.querySelectorAll('button').forEach(button => button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>');
 
-const projects = [
-    { type: 'web', image: 'img/main.png', description: 'Web Project 1 Description' },
-    { type: 'web', image: 'img/main.png', description: 'Web Project 2 Description' },
-    // 다른 타입의 프로젝트도 추가 가능
-];
+function filterSelection(category) {
+    var items = document.getElementsByClassName('project-item');
 
-// 버튼 클릭 시 해당 타입의 프로젝트만 보여주는 함수
-function filterProjects(type) {
-    const filteredProjects = projects.filter(project => project.type === type);
-    displayProjects(filteredProjects);
+    if (category === 'all') {
+        for (var i = 0; i < items.length; i++) {
+            items[i].style.display = 'block';
+        }
+    } else {
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].classList.contains(category)) {
+                items[i].style.display = 'block';
+            } else {
+                items[i].style.display = 'none';
+            }
+        }
+    }
 }
 
-// 프로젝트를 화면에 표시하는 함수
-function displayProjects(projects) {
-    const projectsContainer = document.getElementById('filteredProjects');
-    projectsContainer.innerHTML = ''; // 이전에 표시된 프로젝트를 모두 지움
-
-    projects.forEach(project => {
-        const projectElement = document.createElement('div');
-        projectElement.innerHTML = `
-        <img src="${project.image}" alt="${project.type}">
-        <p>${project.description}</p>
-      `;
-        projectsContainer.appendChild(projectElement);
+// 각 버튼에 대한 클릭 이벤트 핸들러 추가
+document.querySelectorAll('.projects button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        // 현재 활성 버튼인지 확인
+        var isActive = this.classList.contains('active');
+        // 모든 프로젝트 아이템 숨기기
+        document.querySelectorAll('.project-item').forEach(function(item) {
+            item.style.display = 'none';
+        });
+        // 모든 버튼에서 활성 클래스 제거
+        document.querySelectorAll('.projects button').forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+        // 현재 버튼이 활성 상태가 아니면 해당 카테고리의 프로젝트 아이템 표시
+        if (!isActive) {
+            filterSelection(this.textContent.toLowerCase());
+            // 현재 버튼에 활성 클래스 추가
+            this.classList.add('active');
+        }
     });
-}
+});

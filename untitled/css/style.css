@@ -1,4 +1,5 @@
-body{
+/* CSS */
+body {
   background-color: black;
 }
 
@@ -8,8 +9,6 @@ body{
   font-style: normal;
   font-size: 40px;
   color: aliceblue;
-  /*display: flex;*/
-  /*justify-content: space-between;*/
   align-items: center;
   margin: 10px;
 }
@@ -73,7 +72,6 @@ body{
   color: aliceblue;
   margin: 30px;
   display: flex;
-  /*flex-direction: column; !* 컨텐츠를 세로로 배치 *!*/
   align-items: center; /* 가운데 정렬 */
   gap: 20px;
   max-width: 800px; /* 컨텐츠 최대 너비 지정 */
@@ -135,16 +133,11 @@ body{
   background-color: rgba(255, 255, 255, 0.3); /* 호버시 배경색 변경 */
 }
 
-#filteredProjects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.project-item {
+  display: block;
+  color: white; /* 모든 프로젝트 아이템의 글자색을 흰색으로 지정 */
 }
-#filteredProjects div {
-  margin: 10px;
-  color: white; /* 텍스트 색상을 흰색으로 설정 */
-}
-#filteredProjects img {
-  width: 200px;
-  height: auto;
+
+.project-item.web {
+  display: none;
 }

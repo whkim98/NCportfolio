@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/style.css">
-<!--  <link rel="stylesheet" href="css/btn.css">-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
@@ -39,30 +38,25 @@
 
 <div id="projects" class="projects">
   <h2>Projects</h2>
-  <button onclick="filterProjects('all')">ALL</button>
-  <button onclick="filterProjects('web')">Web</button>
+  <button onclick="filterSelection('all')">ALL</button>
+  <button onclick="filterSelection('web')">Web</button>
+
+  <div class="project-item web">
+    <img src="web_project_image1.jpg" alt="Web Project 1">
+    <p>Description of Web Project 1</p>
+  </div>
+
+  <div class="project-item web">
+    <img src="web_project_image2.jpg" alt="Web Project 2">
+    <p>Description of Web Project 2</p>
+  </div>
+
+  <!-- 추가적인 프로젝트 아이템들 -->
+
 </div>
 
-<div id="filteredProjects"></div>
 
 
-<!--JAVASCRIPT !-->
-<script>
-  // 헤더를 가져와서 삽입하는 함수
-  function includeHeader() {
-    fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-              document.getElementById('header-placeholder').innerHTML = data;
-            });
-  }
-
-  // 페이지 로드 시 헤더를 삽입
-  window.onload = function() {
-    includeHeader();
-    showContent(1);
-  };
-</script>
 <script src="js/content.js"></script>
 </body>
 </html>
