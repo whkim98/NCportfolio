@@ -136,6 +136,15 @@ body {
 .project-item {
   display: block;
   color: white; /* 모든 프로젝트 아이템의 글자색을 흰색으로 지정 */
+  max-width: 300px; /* 이미지의 최대 너비를 조절하세요 */
+  overflow: hidden; /* 이미지가 너무 커서 부모 요소를 넘어가지 않도록 설정 */
+  margin: 0 auto; /* 가로 중앙 정렬 */
+}
+
+.project-item img {
+  margin: 20px;
+  width: 100%; /* 이미지를 부모 요소의 너비에 맞게 조정 */
+  height: auto; /* 가로 비율에 맞게 세로 비율 자동 조정 */
 }
 
 .project-item.web {
