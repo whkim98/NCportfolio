@@ -42,3 +42,29 @@ function showContent(contentId) {
 
 document.querySelectorAll('button').forEach(button => button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>');
 
+const projects = [
+    { type: 'web', image: 'img/main.png', description: 'Web Project 1 Description' },
+    { type: 'web', image: 'img/main.png', description: 'Web Project 2 Description' },
+    // 다른 타입의 프로젝트도 추가 가능
+];
+
+// 버튼 클릭 시 해당 타입의 프로젝트만 보여주는 함수
+function filterProjects(type) {
+    const filteredProjects = projects.filter(project => project.type === type);
+    displayProjects(filteredProjects);
+}
+
+// 프로젝트를 화면에 표시하는 함수
+function displayProjects(projects) {
+    const projectsContainer = document.getElementById('filteredProjects');
+    projectsContainer.innerHTML = ''; // 이전에 표시된 프로젝트를 모두 지움
+
+    projects.forEach(project => {
+        const projectElement = document.createElement('div');
+        projectElement.innerHTML = `
+        <img src="${project.image}" alt="${project.type}">
+        <p>${project.description}</p>
+      `;
+        projectsContainer.appendChild(projectElement);
+    });
+}
