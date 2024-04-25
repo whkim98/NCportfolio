@@ -19,11 +19,22 @@ function showContent(contentId) {
 
     var text;
     var textWidth;
+    // const contentInfo =[
+    //     {
+    //         contentId : 1
+    //
+    //     },
+    //     {
+    //
+    //     }]
+    //객체로 생성해서 li 다시 ㄱㄱ
 
     if (contentId === 1) {
         // Skills 버튼 클릭 시
         text = "Skills";
-        contentElement.innerHTML = "<ul><li>JAVA</li><li>Java Script</li><li>MySQL</li><li>Oracle DB</li></ul>";
+        // const arr = ["JAVA", ] //배열로
+        btn.classList.remove('active');
+        contentElement.innerHTML = "<ul><li class='contentLi'>JAVA</li><li class='contentLi'>Java Script</li><li class='contentLi'>MySQL</li><li class='contentLi'>Oracle DB</li></ul>";
     } else if (contentId === 2) {
         // Educations 버튼 클릭 시
         text = "Educations";

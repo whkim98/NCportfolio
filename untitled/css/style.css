@@ -37,7 +37,7 @@ body {
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 2s steps(13, end) infinite;
+  animation: typing 2.5s steps(13, end) infinite;
 }
 
 @keyframes typing {
@@ -51,13 +51,13 @@ body {
     width: 40%;
   }
   60% {
-    width: 60%;
+    width: 100%;
   }
   80% {
-    width: 80%;
+    width: 40%;
   }
   100% {
-    width: 100%;
+    width: 0%;
   }
 }
 
@@ -149,4 +149,12 @@ body {
 
 .project-item.web {
   display: none;
+}
+
+.contentLi{
+  text-align: left;
+}
+
+.text-button.active{
+  color: green;
 }
