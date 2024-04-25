@@ -19,35 +19,57 @@ function showContent(contentId) {
 
     var text;
     var textWidth;
-    // const contentInfo =[
-    //     {
-    //         contentId : 1
-    //
-    //     },
-    //     {
-    //
-    //     }]
-    //객체로 생성해서 li 다시 ㄱㄱ
+    const contentInfo =[
+        {
+            contentId : 1,
+            title : ["java", "javaScript", "Mysql"]
+        },
+        {
+            contentId: 2,
+            title: ["AI 활용 소프트웨어 개발 및 응용과정", "클라우드 기반 웹 데브옵스 프로젝트 과정"]
+        },
+        {
+            contentId: 3,
+            title: ["SQLD", "ADsP", "컴퓨터 활용 능력 1급"]
+        }
+        ]
+    // 객체로 생성해서 li 다시 ㄱㄱ
 
+    contentInfo.forEach(e =>{
+
+    })
+let temp= ""
     if (contentId === 1) {
         // Skills 버튼 클릭 시
         text = "Skills";
         // const arr = ["JAVA", ] //배열로
-        btn.classList.remove('active');
-        contentElement.innerHTML = "<ul><li class='contentLi'>JAVA</li><li class='contentLi'>Java Script</li><li class='contentLi'>MySQL</li><li class='contentLi'>Oracle DB</li></ul>";
+        // btn.classList.remove('active');
+
+        //<li class='contentLi'>JAVA</li><li class='contentLi'>Java Script</li><li class='contentLi'>MySQL</li>
+
+        for (let i = 0; i<contentInfo[0].title.length; i++){
+            temp += `<li class='contentLi'>${contentInfo[0].title[i]}</li>`;
+        }
+        contentElement.innerHTML = `<ul>${temp}</ul>`;
     } else if (contentId === 2) {
         // Educations 버튼 클릭 시
         text = "Educations";
-        contentElement.innerHTML = "<ul><li>AI 활용 소프트웨어 개발 및 응용과정</li><li>클라우드 기반 웹 데브옵스 프로젝트 과정</li></ul>";
+        for (let i = 0; i<contentInfo[1].title.length; i++){
+            temp += `<li class='contentLi'>${contentInfo[1].title[i]}</li>`;
+        }
+        contentElement.innerHTML = `<ul>${temp}</ul>`;
     } else if (contentId === 3) {
         // Certifications 버튼 클릭 시
         text = "Certifications";
-        contentElement.innerHTML = "<ul><li>SQLD</li><li>ADsP</li><li>컴퓨터 활용 능력 1급</li></ul>";
+        for (let i = 0; i<contentInfo[2].title.length; i++){
+            temp += `<li class='contentLi'>${contentInfo[2].title[i]}</li>`;
+        }
+        contentElement.innerHTML = `<ul>${temp}</ul>`;
     }
 
-    textWidth = getTextWidth(text); // 텍스트의 길이를 가져옴
-    barElement.style.width = textWidth + "px"; // 막대의 길이를 텍스트의 길이에 맞게 설정
-    contentElement.appendChild(barElement); // 막대를 콘텐츠 요소에 추가
+    // textWidth = getTextWidth(text); // 텍스트의 길이를 가져옴
+    // barElement.style.width = textWidth + "px"; // 막대의 길이를 텍스트의 길이에 맞게 설정
+    // contentElement.appendChild(barElement); // 막대를 콘텐츠 요소에 추가
 
     // About 섹션으로 스크롤 이동
     if (contentId === 1) {
